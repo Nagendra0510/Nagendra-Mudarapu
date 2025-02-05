@@ -8,9 +8,11 @@ const AnimatedBackground = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return; // Add safety check
     const ctx = canvas.getContext('2d');
 
     const initCanvas = () => {
+      if (!canvas) return; // Add safety check
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };

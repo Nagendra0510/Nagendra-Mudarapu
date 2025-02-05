@@ -78,6 +78,7 @@ const Portfolio = () => {
     // const timer = setTimeout(() => {
     //   setIsLoading(false);
     // }, 2000);
+    setIsLoading(false);
 
     // Scroll progress and section detection
     const handleScroll = () => {
