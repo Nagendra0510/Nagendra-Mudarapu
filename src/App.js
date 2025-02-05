@@ -75,9 +75,10 @@ const Portfolio = () => {
 
   useEffect(() => {
     // Simulated loading effect
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
+    // const timer = setTimeout(() => {
+    //   setIsLoading(false);
+    // }, 2000);
+    setIsLoading(false);
 
     // Scroll progress and section detection
     const handleScroll = () => {
