@@ -5,6 +5,7 @@ import ExpandedProjectCard from './components/ExpandedProjectCard';
 import TimelineItem from './components/TimelineItem';
 import AnimatedBackground from './components/AnimatedBackground';
 import MobileNav from './components/MobileNav';
+import { ThemeProvider } from './components/ThemeProvider';
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -121,8 +122,23 @@ const Portfolio = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.href = `mailto:abhishek.nannuri@outlook.com?subject=${encodeURIComponent(contactForm.subject)}&body=${encodeURIComponent(contactForm.content)}`;
+    // Create a properly formatted email body with line breaks
+    const formattedBody = `
+    Message from: ${contactForm.email}
+    
+    ${contactForm.content}
+      `.trim();
+    // Properly encode the subject and body for mailto
+    const mailtoLink = `mailto:abhishek.nannuri@outlook.com?subject=${encodeURIComponent(contactForm.subject)}&body=${encodeURIComponent(formattedBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form
     setContactForm({ email: '', subject: '', content: '' });
+    
+    // Optional: Add a success message
+    alert('Opening your email client...');
   };
 
   if (isLoading) {
@@ -137,8 +153,9 @@ const Portfolio = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <ThemeProvider>
       <AnimatedBackground />
+      {/* <div className="relative min-h-screen bg-white dark:bg-[#1a1f35] text-gray-900 dark:text-gray-100 transition-colors duration-300"></div> */}
 
       {/* Progress bar */}
       <div 
@@ -147,9 +164,9 @@ const Portfolio = () => {
       />
 
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full bg-gray-900/80 backdrop-blur-lg z-40 transform transition-all duration-300 ${
-        isNavVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}>
+      <nav className={`fixed top-0 w-full bg-white/80 dark:bg-[#1a1f35]/80 backdrop-blur-lg z-40 transition-all duration-300 ${
+          isNavVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}>
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -181,7 +198,7 @@ const Portfolio = () => {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen relative flex items-center justify-center pt-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-purple-500/10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5 dark:from-blue-500/10 dark:to-purple-500/10" />
         <div className="max-w-6xl mx-auto px-4 relative">
           <div className="flex flex-col items-center text-center space-y-8">
             <div className="relative group">
@@ -246,7 +263,7 @@ const Portfolio = () => {
 
       {/* Projects Section */}
       <section id="projects" className="min-h-screen py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-blue-500/5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-accent-light/10 dark:from-accent-dark/10 to-blue-500/5" />
         <div className="max-w-6xl mx-auto px-4 relative">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Featured Projects
@@ -274,7 +291,7 @@ const Portfolio = () => {
 
       {/* Timeline Section */}
       <section id="timeline" className="min-h-screen py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-accent-light/10 dark:from-accent-dark/10 to-purple-500/5" />
         <div className="max-w-3xl mx-auto px-4 relative">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Journey So Far
@@ -307,7 +324,7 @@ const Portfolio = () => {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-blue-500/5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-accent-light/10 dark:from-accent-dark/10 to-blue-500/5" />
         <div className="max-w-3xl mx-auto px-4 relative">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Get In Touch
@@ -356,14 +373,14 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-gray-900/50 backdrop-blur-lg">
+      <footer className="py-8 bg-white/50 dark:bg-[#1a1f35]/50 backdrop-blur-lg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center text-gray-400">
             <p>&copy; {new Date().getFullYear()} Abhishek Nannuri. All rights reserved.</p>
           </div>
         </div>
       </footer>
-    </div>
+    </ThemeProvider>
   );
 };
 

@@ -1,96 +1,93 @@
 import React, { useEffect, useRef } from 'react';
+import { useTheme } from './ThemeProvider';
 
 const AnimatedBackground = () => {
   const canvasRef = useRef(null);
-  const mouseRef = useRef({ x: 0, y: 0 });
+  const mouseRef = useRef({ x: undefined, y: undefined });
   const particlesRef = useRef([]);
-  const requestRef = useRef();
+  const { isDark } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return; // Add safety check
+    if (!canvas) return;
+    
     const ctx = canvas.getContext('2d');
+    let animationFrameId;
 
-    const initCanvas = () => {
-      if (!canvas) return; // Add safety check
+    // Set canvas size
+    const setCanvasSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
+    setCanvasSize();
 
     class Particle {
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.size = Math.random() * 1.5 + 0.5;
-        this.baseX = x;
-        this.baseY = y;
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.baseX = this.x;
+        this.baseY = this.y;
         this.density = (Math.random() * 30) + 1;
-        this.distance = undefined;
-        this.brightness = 0.5;
       }
 
       draw() {
+        ctx.fillStyle = isDark ? 'rgba(147, 197, 253, 0.3)' : 'rgba(59, 130, 246, 0.3)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
-        ctx.fillStyle = `rgba(147, 197, 253, ${this.brightness})`; // Light blue color
         ctx.fill();
       }
 
       update() {
-        // Calculate distance between particle and mouse
-        const dx = mouseRef.current.x - this.x;
-        const dy = mouseRef.current.y - this.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        this.distance = distance;
-
-        const forceDirectionX = dx / distance;
-        const forceDirectionY = dy / distance;
-        const maxDistance = 100;
-        const force = (maxDistance - distance) / maxDistance;
-        const directionX = forceDirectionX * force * this.density;
-        const directionY = forceDirectionY * force * this.density;
-
-        if (distance < maxDistance) {
-          this.x -= directionX;
-          this.y -= directionY;
-          this.brightness = 1;
-        } else {
-          if (this.x !== this.baseX) {
-            const dx = this.x - this.baseX;
-            this.x -= dx/20;
+        if (mouseRef.current.x !== undefined && mouseRef.current.y !== undefined) {
+          let dx = mouseRef.current.x - this.x;
+          let dy = mouseRef.current.y - this.y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+          let forceDirectionX = dx / distance;
+          let forceDirectionY = dy / distance;
+          let maxDistance = 100;
+          let force = (maxDistance - distance) / maxDistance;
+          
+          if (distance < maxDistance) {
+            this.x -= forceDirectionX * force * this.density;
+            this.y -= forceDirectionY * force * this.density;
+          } else {
+            if (this.x !== this.baseX) {
+              let dx = this.x - this.baseX;
+              this.x -= dx/10;
+            }
+            if (this.y !== this.baseY) {
+              let dy = this.y - this.baseY;
+              this.y -= dy/10;
+            }
           }
-          if (this.y !== this.baseY) {
-            const dy = this.y - this.baseY;
-            this.y -= dy/20;
-          }
-          this.brightness = 0.5;
         }
       }
     }
 
+    // Initialize particles
     const init = () => {
       particlesRef.current = [];
-      const numberOfParticles = (canvas.width * canvas.height) / 15000;
-      
+      const numberOfParticles = (canvas.width * canvas.height) / 9000;
       for (let i = 0; i < numberOfParticles; i++) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        particlesRef.current.push(new Particle(x, y));
+        particlesRef.current.push(new Particle());
       }
     };
+    init();
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       // Draw connections
-      ctx.strokeStyle = 'rgba(147, 197, 253, 0.05)';
+      ctx.strokeStyle = isDark ? 'rgba(147, 197, 253, 0.15)' : 'rgba(59, 130, 246, 0.15)';
       ctx.lineWidth = 1;
+
       for (let i = 0; i < particlesRef.current.length; i++) {
         for (let j = i; j < particlesRef.current.length; j++) {
-          const dx = particlesRef.current[i].x - particlesRef.current[j].x;
-          const dy = particlesRef.current[i].y - particlesRef.current[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          let dx = particlesRef.current[i].x - particlesRef.current[j].x;
+          let dy = particlesRef.current[i].y - particlesRef.current[j].y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 100) {
             ctx.beginPath();
@@ -107,42 +104,53 @@ const AnimatedBackground = () => {
         particle.draw();
       });
 
-      requestRef.current = requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     };
 
-    const handleMouseMove = (e) => {
+    // Event listeners
+    const handleMouseMove = (event) => {
       mouseRef.current = {
-        x: e.clientX,
-        y: e.clientY
+        x: event.clientX,
+        y: event.clientY
+      };
+    };
+
+    const handleMouseLeave = () => {
+      mouseRef.current = {
+        x: undefined,
+        y: undefined
       };
     };
 
     const handleResize = () => {
-      initCanvas();
+      setCanvasSize();
       init();
     };
 
-    // Initialize
-    initCanvas();
-    init();
-    animate();
-
-    // Event listeners
+    // Add event listeners
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseleave', handleMouseLeave);
     window.addEventListener('resize', handleResize);
 
+    // Start animation
+    animate();
+
+    // Cleanup
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
       window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(requestRef.current);
+      cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [isDark]); // Depend on isDark to re-initialize when theme changes
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none -z-10"
-      style={{ backgroundColor: '#1a1f35' }} // Dark navy blue background
+      className="fixed inset-0 pointer-events-none -z-10 transition-colors duration-300"
+      style={{ 
+        backgroundColor: isDark ? '#1a1f35' : '#ffffff'
+      }}
     />
   );
 };

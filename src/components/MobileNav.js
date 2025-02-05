@@ -6,28 +6,22 @@ const MobileNav = ({ isOpen, setIsOpen, activeSection }) => {
 
   return (
     <div className="md:hidden">
-      {/* Burger Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-gray-400 hover:text-blue-400 transition-colors duration-300"
-      >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-50 transform ${
+        className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-300 ease-in-out`}
+        }`}
       >
         <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-lg">
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
+          {/* Navigation Container - Added padding-top to account for header height */}
+          <div className="flex flex-col pt-15 px-6">
+            {/* Menu Items */}
             {navItems.map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
                 onClick={() => setIsOpen(false)}
-                className={`text-2xl capitalize transition-all duration-300 hover:text-blue-400 ${
+                className={`py-4 text-lg capitalize transition-all duration-300 hover:text-blue-400 border-b border-gray-800 ${
                   activeSection === item ? 'text-blue-400' : 'text-gray-400'
                 }`}
               >
@@ -37,6 +31,15 @@ const MobileNav = ({ isOpen, setIsOpen, activeSection }) => {
           </div>
         </div>
       </div>
+
+      {/* Burger/Close Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed top-4 right-4 z-50 p-2 text-gray-400 hover:text-blue-400 transition-colors duration-300 bg-gray-900/80 rounded-lg"
+        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+      >
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
     </div>
   );
 };
