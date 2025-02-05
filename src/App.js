@@ -209,7 +209,7 @@ const Portfolio = () => {
 
               <div className="flex justify-center space-x-6 pt-6">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/Abhi-0212000/" 
                   className="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -217,7 +217,7 @@ const Portfolio = () => {
                   <GithubIcon size={28} />
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/abhi-nannuri-02122000/" 
                   className="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
