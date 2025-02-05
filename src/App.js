@@ -113,7 +113,7 @@ const Portfolio = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => {
-      clearTimeout(timer);
+      // clearTimeout(timer);
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollY]);
