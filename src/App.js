@@ -155,6 +155,7 @@ const Portfolio = () => {
 
   return (
     <ThemeProvider>
+      {/* <div className="min-h-screen bg-[#1a1f35] text-gray-900 dark:text-gray-100 transition-colors duration-300"> */}
       <AnimatedBackground />
       {/* <div className="relative min-h-screen bg-white dark:bg-[#1a1f35] text-gray-900 dark:text-gray-100 transition-colors duration-300"></div> */}
 
@@ -381,6 +382,7 @@ const Portfolio = () => {
           </div>
         </div>
       </footer>
+    {/* </div> */}
     </ThemeProvider>
   );
 };
