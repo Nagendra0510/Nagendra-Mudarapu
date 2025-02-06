@@ -12,10 +12,10 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "prebuild": "cp public/sitemap.xml build/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
+    "prebuild": "if exist build\\sitemap.xml del build\\sitemap.xml && copy public\\sitemap.xml build\\",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
