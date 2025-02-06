@@ -12,6 +12,7 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
+    "prebuild": "cp public/sitemap.xml build/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
