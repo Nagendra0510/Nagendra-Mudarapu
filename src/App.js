@@ -6,6 +6,7 @@ import TimelineItem from './components/TimelineItem';
 import AnimatedBackground from './components/AnimatedBackground';
 import MobileNav from './components/MobileNav';
 import { ThemeProvider } from './components/ThemeProvider';
+import ProfilePic from './profile-pic.jpg'
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -204,8 +205,8 @@ const Portfolio = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
               <img 
-                src="/api/placeholder/300/300" 
-                alt="Profile"
+                src={ProfilePic}
+                alt="Abhi"
                 className="relative w-48 h-48 rounded-full object-cover border-4 border-gray-800 group-hover:border-blue-500 transition duration-300"
               />
             </div>
