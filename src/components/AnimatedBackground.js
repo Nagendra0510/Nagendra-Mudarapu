@@ -149,7 +149,7 @@ const AnimatedBackground = () => {
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none -z-10 transition-colors duration-300"
       style={{ 
-        backgroundColor: isDark ? '#1a1f35' : '#ffffff'
+        backgroundColor: isDark ? '#121212' : '#ffffff'
       }}
     />
   );

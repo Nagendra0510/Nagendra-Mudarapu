@@ -13,7 +13,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrollProgress, setScrollProgress] = useState(0);
   const [contactForm, setContactForm] = useState({ email: '', subject: '', content: '' });
-  const [showForm, setShowForm] = useState(false);
+  // const [showForm, setShowForm] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -259,9 +259,9 @@ const Portfolio = () => {
                 />
               </div>
               
-              <div className="space-y-4 max-w-2xl">
+              <div className="space-y-5 max-w-2xl">
                 <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent">
-                  Robotic Software Developer
+                  Robotics Software Engineer
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
                   Developing comprehensive autonomous systems with expertise in motion planning, localization,
