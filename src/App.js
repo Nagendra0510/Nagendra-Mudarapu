@@ -260,7 +260,7 @@ const Portfolio = () => {
               </div>
               
               <div className="space-y-5 max-w-2xl">
-                <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent">
+                <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent pb-2">
                   Robotics Software Engineer
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
