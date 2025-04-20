@@ -271,7 +271,7 @@ const Portfolio = () => {
                 
                 <div className="flex justify-center items-center space-x-4 text-gray-600 dark:text-gray-400">
                   <MapPinIcon className="w-5 h-5" />
-                  <span>Schmalkalden, DE</span>
+                  <span>München, DE</span>
                 </div>
 
                 <div className="flex justify-center space-x-6 pt-6">
