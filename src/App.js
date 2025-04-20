@@ -32,7 +32,7 @@ const Portfolio = () => {
         "Integrated state-of-the-art velocity profiling system using Dynamic Window Approach",
         "Designed and implemented a custom RPROP optimization framework with gradient-based mapping"
       ],
-      technologies: ['C++', 'ROS2', 'Lanelet2', 'Python', 'RPROP', 'OSM'],
+      technologies: ['C++', 'ROS2', 'Lanelet2', 'Python', 'RPROP', 'OSM', 'Docker'],
       github: "https://github.com/Abhi-0212000/AMR-Logistic-System"
     },
     {
@@ -346,6 +346,19 @@ const Portfolio = () => {
             Journey So Far
           </h2>
           <div className="space-y-8">
+          <TimelineItem
+              year="03.2025 - Present"
+              title="Intern Next Generation Robotics"
+              subtitle="BMW"
+              points={[
+                "Development and implementaion of algorithms for robotic applications",
+                "Conduct real-world testing and validation of algorithms on physical robotic manipulators in lab environment",
+                "Engineer and optimize robotic manipulation solutions using MoveIt Pro and Behavior Trees for Universal Robot and Kuka platforms",
+                "Contribute to DevOps workflows by developing CI pipelines and Docker configurations to streamline development processes",
+                "Technology stack: C++, Python, ROS2, Docker, MoveIt Pro, Behavior Trees"
+              ]}
+              delay={100}
+            />
             <TimelineItem
               year="2022 - Present"
               title="Master of Engineering"
@@ -366,7 +379,7 @@ const Portfolio = () => {
               delay={200}
             />
             <TimelineItem
-              year="2017 - 2021"
+              year="2021"
               title="Bachelor of Technology"
               subtitle="Karunya University"
               description="Major in Mechanical Engineering"
