@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { X, Github } from 'lucide-react';
 
 const ApproachCard = ({ approach }) => (
@@ -63,6 +63,7 @@ const SingleProjectView = ({ project }) => (
                 {tech}
               </span>
             ))}
+
           </div>
         </div>
       )}
@@ -102,15 +103,45 @@ const MultiApproachView = ({ project }) => (
 );
 
 const ExpandedProjectCard = ({ project, onClose }) => {
+  const modalRef = useRef(null);
+
+  // Handle click outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        onClose();
+      }
+    }
+
+    // Add event listener when component mounts
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // Prevent scrolling on body when modal is open
+    document.body.style.overflow = 'hidden';
+    
+    // Clean up
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  // Early return after hooks are defined
   if (!project) return null;
   
   const isMultiApproach = Boolean(project.approaches);
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+      {/* Backdrop */}
+      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" />
+      
       <div className="relative min-h-screen flex items-center justify-center p-4">
-        <div className="relative bg-white dark:bg-gray-900 rounded-xl max-w-3xl w-full p-6 border border-gray-200 dark:border-gray-700 max-h-[80vh] overflow-y-auto">
+        {/* Modal content */}
+        <div 
+          ref={modalRef}
+          className="relative bg-white dark:bg-gray-900 rounded-xl max-w-3xl w-full p-6 border border-gray-200 dark:border-gray-700 max-h-[80vh] overflow-y-auto"
+        >
           {/* Close button */}
           <button
             onClick={onClose}
