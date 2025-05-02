@@ -217,7 +217,7 @@ const Portfolio = () => {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent">
-              Abhishek Nannuri
+              Nagendra Mudarapu
             </h1>
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -261,7 +261,7 @@ const Portfolio = () => {
               
               <div className="space-y-5 max-w-2xl">
                 <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent pb-2">
-                  Robotics Software Engineer
+                  Digitalisation and Sustainability Engineer
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
                   Developing comprehensive autonomous systems with expertise in motion planning, localization,
@@ -443,7 +443,7 @@ const Portfolio = () => {
       <footer className="py-8 bg-gray-50/50 dark:bg-[#1a1f35]/50 backdrop-blur-lg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center text-gray-600 dark:text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Abhishek Nannuri. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Nagendra Mudarapu. All rights reserved.</p>
           </div>
         </div>
       </footer>
