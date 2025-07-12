@@ -198,6 +198,11 @@ const Portfolio = () => {
     );
   }
 
+  // Updated name and links to reflect your details
+  const githubLink = "https://github.com/Nagendra0510";
+  const linkedinLink = "https://www.linkedin.com/in/nagendra0510/";
+  const emailLink = "mailto:nagendra0510@outlook.com";
+
   return (
     <ThemeProvider>
       {/* <div className="min-h-screen bg-[#1a1f35] text-gray-900 dark:text-gray-100 transition-colors duration-300"> */}
@@ -276,7 +281,7 @@ const Portfolio = () => {
 
                 <div className="flex justify-center space-x-6 pt-6">
                   <a 
-                    href="https://github.com/Abhi-0212000/" 
+                    href={githubLink} 
                     className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transform hover:scale-110 transition duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -284,7 +289,7 @@ const Portfolio = () => {
                     <GithubIcon size={28} />
                   </a>
                   <a 
-                    href="https://www.linkedin.com/in/abhi-nannuri-02122000/" 
+                    href={linkedinLink} 
                     className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transform hover:scale-110 transition duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -292,7 +297,7 @@ const Portfolio = () => {
                     <LinkedinIcon size={28} />
                   </a>
                   <a 
-                    href="mailto:abhishek.nannuri@outlook.com" 
+                    href={emailLink} 
                     className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transform hover:scale-110 transition duration-300"
                   >
                     <MailIcon size={28} />
