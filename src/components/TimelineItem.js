@@ -12,7 +12,7 @@ const TimelineItem = ({ year, title, subtitle, description, points = [], delay =
     </h3>
     <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-2">{subtitle}</h4>
     {description && <p className="text-gray-600 dark:text-gray-400 mb-2">{description}</p>}
-    {points.length > 0 && (
+    {points?.length > 0 && (
       <ul className="list-disc list-inside space-y-1">
         {points.map((point, index) => (
           <li key={index} className="text-gray-600 dark:text-gray-400 pl-2">{point}</li>

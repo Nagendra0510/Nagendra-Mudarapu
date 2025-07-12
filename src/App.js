@@ -7,6 +7,7 @@ import AnimatedBackground from './components/AnimatedBackground';
 import MobileNav from './components/MobileNav';
 import { ThemeProvider } from './components/ThemeProvider';
 import ProfilePic from './profile-pic.jpg'
+import { timelineData } from './data/timelineData';
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,35 +23,6 @@ const Portfolio = () => {
   // Project Data
   const projectsData = [
     {
-      title: "AMR Logistic System",
-      description: "Intracity Delivery Autonomous Mobile Robot for Urban Navigation System featuring fault-tolerant operation and seamless ROS2 integration.",
-      tags: ['C++', 'ROS2', 'Navigation', 'Path Planning'],
-      details: [
-        "Engineered a production-grade Global Path Planner using Lanelet2 and GPS-based navigation",
-        "Architected comprehensive modular ROS2-based system architecture",
-        "Implemented Local Trajectory Planner using Quintic Bézier splines",
-        "Integrated state-of-the-art velocity profiling system using Dynamic Window Approach",
-        "Designed and implemented a custom RPROP optimization framework with gradient-based mapping"
-      ],
-      technologies: ['C++', 'ROS2', 'Lanelet2', 'Python', 'RPROP', 'OSM', 'Docker'],
-      github: "https://github.com/Abhi-0212000/AMR-Logistic-System"
-    },
-    {
-      title: "Production-Grade Robotics Software Development Challenge",
-      description: "Developed a robust ROS2-based framework integrating modern DevOps practices, automated testing, and continuous deployment. Features containerized deployment and comprehensive quality assurance pipelines.",
-      tags: ["DevOps", "ROS2", "CI", "Docker", "Software Architecture", "Production Systems"],
-      details: [
-        "Implemented ROS2 nodes with parameterized configuration management and real-time data visualization",
-        "Built continuous integration pipeline using GitHub Actions for automated testing, linting, and Docker builds",
-        "Established code quality gates with branch protection rules and automated PR validation workflows",
-        "Developed thread-safe data handling with fault-tolerant error management",
-        "Created automated test suite with pytest integration and launch testing"
-      ],
-      technologies: ["DevOps", "ROS2", "CI", "Docker", "Software Architecture", "Production Systems", 
-        "GitHub Actions", "pytest", "Python", "Git"],
-      github: "https://github.com/Abhi-0212000/ros2-dev-challenge"
-    },
-    {
       title: "Visual Odometry for Localization",
       description: "Implemented visual odometry using Essential Matrix Decomposition, achieving 92% accuracy in camera motion estimation.",
       tags: ['Computer Vision', 'SLAM', 'Python'],
@@ -63,60 +35,6 @@ const Portfolio = () => {
       ],
       technologies: ['Python', 'OpenCV', 'NumPy', 'SIFT', 'Essential Matrix', 'FLANN'],
       github: "https://github.com/Abhi-0212000/Visual-Odometry-for-Localization"
-    },
-    {
-      title: "Road Lane Detection System",
-      description: "Multi-approach Computer Vision Based Advanced Driver Assistance system implementing Classical CV, Sliding Window, and Deep Learning techniques, achieving up to 98% accuracy across different approaches.",
-      tags: ['Computer Vision', 'Deep Learning', 'Python', 'OpenCV', 'TensorFlow'],
-      approaches: [
-        {
-          name: "Classical Computer Vision Pipeline",
-          details: [
-            "Constructed a computer vision system using OpenCV and NumPy achieving 95% lane detection accuracy through Hough Transform algorithms and adaptive thresholding",
-            "Developed real-time image processing pipeline integrating Gaussian blur and Canny edge detection, reducing false positives by 40%",
-            "Established HSV color space transformation and dynamic ROI masking enabling 98% detection rate in varying lighting conditions",
-            "Designed slope-intercept tracking algorithms in Python improving continuous detection during lane gaps by 65%"
-          ],
-          technologies: ['Python', 'OpenCV', 'NumPy', 'Hough Transform'],
-          github: "https://github.com/Abhi-0212000/Road-Lane-Detection"
-        },
-        {
-          name: "Sliding Window Algorithm",
-          details: [
-            "Architected an advanced detection system using sliding window technique and image moment calculations achieving 98% accuracy",
-            "Incorporated Birds-Eye-View transformation using perspective matrices, improving curved road detection by 55%",
-            "Engineered centroid tracking system with contour detection reducing false detections by 60% using statistical filtering",
-            "Refined lane visualization using polynomial fitting and HLS color space, improving detection accuracy by 88%",
-            "Devised a fail-safe mechanism reducing lane detection failures by 95% during challenging conditions"
-          ],
-          technologies: ['Python', 'OpenCV', 'NumPy', 'Polynomial Fitting'],
-          github: "https://github.com/Abhi-0212000/Road-Lane-Detection-Using-Sliding-Window"
-        },
-        {
-          name: "Deep Learning with FCN8",
-          details: [
-            "Architected FCN8 semantic segmentation network with VGG16 backbone using TensorFlow/Keras for road detection",
-            "Trained the model on KITTI road dataset achieving 93% accuracy in road segmentation",
-            "Streamlined data pipeline with tf.data API utilizing batch prefetching for efficient training",
-            "Incorporated real-time video processing achieving 60 FPS with mask overlay visualization"
-          ],
-          technologies: ['Python', 'TensorFlow', 'Keras', 'FCN8', 'VGG16'],
-          github: "https://github.com/Abhi-0212000/Road-Segmentation-Using-Deep-Learning"
-        }
-      ]
-    },
-    {
-      title: "State Estimation and Localization",
-      description: "EKF sensor fusion pipeline integrating IMU, GNSS, and LIDAR data for vehicle state estimation.",
-      tags: ['Sensor Fusion', 'EKF', 'Python'],
-      details: [
-        "Formulated Extended Kalman Filter sensor fusion pipeline",
-        "Integrated multi-sensor data with covariance tracking",
-        "Built 3D visualization tools for trajectory analysis",
-        "Implemented robust error state modeling"
-      ],
-      technologies: ['Python', 'NumPy', 'Matplotlib', 'Sensor Fusion'],
-      github: "https://github.com/Abhi-0212000/State-Estimation-and-Localization-for-Self-Driving-Car"
     }
   ];
 
@@ -200,8 +118,8 @@ const Portfolio = () => {
 
   // Updated name and links to reflect your details
   const githubLink = "https://github.com/Nagendra0510";
-  const linkedinLink = "https://www.linkedin.com/in/nagendra0510/";
-  const emailLink = "mailto:nagendra0510@outlook.com";
+  const linkedinLink = "https://www.linkedin.com/in/nagendra-mudarapu/";
+  const emailLink = "mailto:mudarapu.nagendra@gmail.com";
 
   return (
     <ThemeProvider>
@@ -269,14 +187,12 @@ const Portfolio = () => {
                   Digitalisation and Sustainability Engineer
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Developing comprehensive autonomous systems with expertise in motion planning, localization,
-                  perception. Passionate about creating intelligent systems that push the boundaries
-                  of what's possible in robotics.
+                Digitalisation and Sustainability Engineer focused on implementing Digital Twin Solution as Digital Product Passports to support regulatory compliance, transparency, and sustainable practices in the automotive industry aligning with upcoming EU regulations.
                 </p>
                 
                 <div className="flex justify-center items-center space-x-4 text-gray-600 dark:text-gray-400">
                   <MapPinIcon className="w-5 h-5" />
-                  <span>München, DE</span>
+                  <span>Regensburg, DE</span>
                 </div>
 
                 <div className="flex justify-center space-x-6 pt-6">
@@ -351,45 +267,17 @@ const Portfolio = () => {
             Journey So Far
           </h2>
           <div className="space-y-8">
-          <TimelineItem
-              year="03.2025 - Present"
-              title="Intern Next Generation Robotics"
-              subtitle="BMW"
-              points={[
-                "Development and implementaion of algorithms for robotic applications",
-                "Conduct real-world testing and validation of algorithms on physical robotic manipulators in lab environment",
-                "Engineer and optimize robotic manipulation solutions using MoveIt Pro and Behavior Trees for Universal Robot and Kuka platforms",
-                "Contribute to DevOps workflows by developing CI pipelines and Docker configurations to streamline development processes",
-                "Technology stack: C++, Python, ROS2, Docker, MoveIt Pro, Behavior Trees"
-              ]}
-              delay={100}
-            />
-            <TimelineItem
-              year="2022 - Present"
-              title="Master of Engineering"
-              subtitle="Hochschule Schmalkalden"
-              description="Major in Mechatronics & Robotics with focus on Autonomous Systems"
-              delay={100}
-            />
-            <TimelineItem
-              year="2021 - 2022"
-              title="DevOps Engineer"
-              subtitle="Accenture"
-              points={[
-                "Built CI/CD pipelines across Azure & AWS, improving deployment efficiency by 40%",
-                "Implemented security protocols and managed credentials via Azure Key Vault",
-                "Developed enterprise applications using C# and PostgreSQL",
-                "Assisted in AWS infrastructure modernization and optimization"
-              ]}
-              delay={200}
-            />
-            <TimelineItem
-              year="2021"
-              title="Bachelor of Technology"
-              subtitle="Karunya University"
-              description="Major in Mechanical Engineering"
-              delay={300}
-            />
+            {timelineData.map((item, index) => (
+              <TimelineItem
+                key={index}
+                year={item.year}
+                title={item.title}
+                subtitle={item.subtitle}
+                description={item.description}
+                points={item.points}
+                delay={index * 100}
+              />
+            ))}
           </div>
         </div>
       </section>
