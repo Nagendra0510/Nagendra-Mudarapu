@@ -23,18 +23,46 @@ const Portfolio = () => {
   // Project Data
   const projectsData = [
     {
-      title: "Visual Odometry for Localization",
-      description: "Implemented visual odometry using Essential Matrix Decomposition, achieving 92% accuracy in camera motion estimation.",
-      tags: ['Computer Vision', 'SLAM', 'Python'],
+      title: "Digital Twin Implementation for Bottle Filling Plant",
+      description: "Developed a comprehensive Digital Twin solution with Digital Product Passports for industrial assets, focusing on sustainability and regulatory compliance.",
+      tags: ['Digital Twin', 'Industry 4.0', 'IEC 61406', 'ISO 14040'],
       details: [
-        "Programmed a feature extraction pipeline using SIFT descriptors, FLANN matching",
-        "Reduced outliers by 85% using RANSAC outlier rejection",
-        "Implemented visual odometry using Essential Matrix Decomposition",
-        "Achieved 92% accuracy in camera motion estimation",
-        "Reconstructed vehicle trajectory through incremental pose transformations"
+        "Developed Digital Product Passports including Name Plate, Bill Of Materials, Carbon footprint, Technical Data, Operations Data, and Handover Documents",
+        "Integrated unique QR codes (IEC 61406) for seamless asset traceability and lifecycle data access",
+        "Created comprehensive digital profiles by linking static details with dynamic metrics",
+        "Implemented sustainability tracking through lifecycle assessment (ISO-14040 and ISO-14044)",
+        "Ensured compliance with regulatory standards for industrial asset documentation"
       ],
-      technologies: ['Python', 'OpenCV', 'NumPy', 'SIFT', 'Essential Matrix', 'FLANN'],
-      github: "https://github.com/Abhi-0212000/Visual-Odometry-for-Localization"
+      technologies: ['Digital Twin', 'Asset Administration Shell', 'QR Code Integration', 'IEC 61406', 'ISO 14040/14044'],
+      github: "https://github.com/Nagendra0510/Digital-Twin-Implementation"
+    },
+    {
+      title: "Self-optimized Industry 4.0 Plant",
+      description: "Developed and implemented RFID-based traceability system and PLC automation for an Industry 4.0 bottle filling plant.",
+      tags: ['Industry 4.0', 'RFID', 'PLC', 'Automation'],
+      details: [
+        "Implemented RFID traceability system using Raspberry Pi for real-time product tracking",
+        "Analyzed and tested ladder logic and SCL code for conveyor and bottle-filling motor control",
+        "Created PLC-HMI communication tags to ensure seamless interaction for automated bottle filling",
+        "Integrated industrial automation protocols for reliable system communication",
+        "Developed comprehensive monitoring and control interface for plant operations"
+      ],
+      technologies: ['Raspberry Pi', 'RFID', 'PLC Programming', 'SCL', 'HMI', 'Industrial Automation'],
+      github: "https://github.com/Nagendra0510/Industry4.0-Plant"
+    },
+    {
+      title: "Patent: Mechatronic Robotic Device for Precision Irrigation",
+      description: "Developed and patented an autonomous robotic system for precision agriculture using ROS, focusing on smart irrigation and weed control.",
+      tags: ['Patent', 'Robotics', 'ROS', 'Machine Learning', 'Agriculture'],
+      details: [
+        "Designed and patented a mechatronic robotic system for autonomous precision agriculture",
+        "Implemented Convolutional Neural Networks for real-time weed detection in agricultural fields",
+        "Developed a precise spraying mechanism for targeted irrigation and herbicide application",
+        "Created navigation algorithms for autonomous field traversal using ROS",
+        "Integrated machine learning models with robotic control systems for intelligent decision making"
+      ],
+      technologies: ['Robot Operating System (ROS)', 'CNN', 'Python', 'Computer Vision', 'Mechatronics'],
+      link: "https://www.quickcompany.in/patents/mechatronic-robotic-device-for-self-regulating-and-precision-irrigation-using-robotic-operating-system"
     }
   ];
 
@@ -84,6 +112,11 @@ const Portfolio = () => {
     };
   }, [lastScrollY]);
 
+  // Updated name and links to reflect your details
+  const githubLink = "https://github.com/Nagendra0510";
+  const linkedinLink = "https://www.linkedin.com/in/nagendra-mudarapu/";
+  const emailLink = "mailto:mudarapu.nagendra@gmail.com";
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Create a properly formatted email body with line breaks
@@ -93,7 +126,7 @@ const Portfolio = () => {
     ${contactForm.content}
       `.trim();
     // Properly encode the subject and body for mailto
-    const mailtoLink = `mailto:abhishek.nannuri@outlook.com?subject=${encodeURIComponent(contactForm.subject)}&body=${encodeURIComponent(formattedBody)}`;
+    const mailtoLink = `mailto:mudarapu.nagendra@gmail.com?subject=${encodeURIComponent(contactForm.subject)}&body=${encodeURIComponent(formattedBody)}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -115,11 +148,6 @@ const Portfolio = () => {
       </div>
     );
   }
-
-  // Updated name and links to reflect your details
-  const githubLink = "https://github.com/Nagendra0510";
-  const linkedinLink = "https://www.linkedin.com/in/nagendra-mudarapu/";
-  const emailLink = "mailto:mudarapu.nagendra@gmail.com";
 
   return (
     <ThemeProvider>

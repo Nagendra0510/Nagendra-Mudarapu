@@ -1,8 +1,8 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, FileText } from 'lucide-react';
 
 const ProjectCard = ({ project, onClick, delay = 0 }) => {
-  const { title, description, tags, technologies } = project;
+  const { title, description, tags, technologies, link } = project;
 
   // Use tags if available, otherwise fall back to technologies
   const displayTechnologies = tags || technologies || [];
@@ -17,10 +17,19 @@ const ProjectCard = ({ project, onClick, delay = 0 }) => {
         <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300">
           {title}
         </h3>
-        <ExternalLink 
-          className="text-gray-600 dark:text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300" 
-          size={20} 
-        />
+        <div className="flex items-center gap-2">
+          {link && (
+            <FileText 
+              className="text-blue-500 dark:text-blue-400" 
+              size={20} 
+              title="Patent Documentation Available"
+            />
+          )}
+          <ExternalLink 
+            className="text-gray-600 dark:text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300" 
+            size={20} 
+          />
+        </div>
       </div>
       <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
       <div className="flex flex-wrap gap-2">

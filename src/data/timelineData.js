@@ -1,7 +1,7 @@
 export const timelineData = [
   {
     year: "03.2025 - Present",
-    title: "Digital Product Passport Engineer",
+    title: "Digitalisation and Sustainability Engineer",
     subtitle: "Schaeffler",
     points: [
       "Analyzing EU regulatory frameworks (Battery Regulation, ELVR) to identify data-sharing and compliance requirements for e-drive systems",
@@ -12,14 +12,9 @@ export const timelineData = [
       "Supporting development of scalable digitalization strategies for e-mobility components within Schaeffler's sustainability goals"
     ]
   },
+  
   {
-    year: "2022 - Present",
-    title: "Master of Engineering",
-    subtitle: "Hochschule Schmalkalden",
-    description: "Major in Mechatronics & Robotics with focus on Autonomous Systems"
-  },
-  {
-    year: "Jan 2024 – Current",
+    year: "Jan 2024 – Jan 2025",
     title: "Working Student (Design and Development Engineer)",
     subtitle: "HZDR (Helmholtz-Zentrum Dresden-Rossendorf)",
     points: [
@@ -27,25 +22,16 @@ export const timelineData = [
       "Programming and controlling axis positions of stepper motors using Owisoft",
       "Improved system automation and control strategies, contributing to increased process efficiency"
     ]
-  },
-  {
-    year: "Sep 2024 – Ongoing",
-    title: "Implementation of Digital Twin in a Bottle Filling Plant",
+  },{
+    year: "2022 - Present",
+    title: "Master of Engineering",
     subtitle: "Hochschule Schmalkalden",
-    points: [
-      "Developed Digital Product Passports for industrial assets",
-      "Integrated unique QR codes for seamless traceability and lifecycle data access",
-      "Ensured compliance with regulatory standards and facilitated sustainability tracking"
-    ]
-  },
-  {
-    year: "Nov 2023",
-    title: "Self-optimized Industry 4.0 Plant",
-    subtitle: "Hochschule Schmalkalden",
-    points: [
-      "Implemented RFID traceability using Raspberry Pi",
-      "Analyzed and tested ladder logic and SCL code for conveyor and bottle-filling motor control",
-      "Created PLC-HMI communication tags for automated bottle filling"
-    ]
+    description: "Major in Mechatronics & Robotics with focus on Innovation"
+  },{
+    year: "2017 - 2021",
+    title: "Bachelor of Engineering",
+    subtitle: "Vignan University",
+    description: " Mechanical Engineering with focus on Mechatronics and Robotics"
   }
+  
 ];

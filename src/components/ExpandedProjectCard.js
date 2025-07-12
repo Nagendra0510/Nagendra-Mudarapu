@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { X, Github } from 'lucide-react';
+import { X, Github, ExternalLink } from 'lucide-react';
 
 const ApproachCard = ({ approach }) => (
   <div className="bg-gray-100/50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700 mb-4">
@@ -63,14 +63,13 @@ const SingleProjectView = ({ project }) => (
                 {tech}
               </span>
             ))}
-
           </div>
         </div>
       )}
     </div>
 
-    {project.github && (
-      <div className="flex space-x-4 pt-4">
+    <div className="flex space-x-4 pt-4">
+      {project.github && (
         <a
           href={project.github}
           target="_blank"
@@ -80,8 +79,19 @@ const SingleProjectView = ({ project }) => (
           <Github size={20} />
           <span>View Source</span>
         </a>
-      </div>
-    )}
+      )}
+      {project.link && (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2 text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+        >
+          <ExternalLink size={20} />
+          <span>View Patent</span>
+        </a>
+      )}
+    </div>
   </div>
 );
 
