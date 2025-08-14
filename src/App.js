@@ -27,14 +27,12 @@ const Portfolio = () => {
       description: "Developed a comprehensive Digital Twin solution with Digital Product Passports for industrial assets, focusing on sustainability and regulatory compliance.",
       tags: ['Digital Twin', 'Industry 4.0', 'IEC 61406', 'ISO 14040'],
       details: [
-        "Developed Digital Product Passports including Name Plate, Bill Of Materials, Carbon footprint, Technical Data, Operations Data, and Handover Documents",
-        "Integrated unique QR codes (IEC 61406) for seamless asset traceability and lifecycle data access",
-        "Created comprehensive digital profiles by linking static details with dynamic metrics",
-        "Implemented sustainability tracking through lifecycle assessment (ISO-14040 and ISO-14044)",
-        "Ensured compliance with regulatory standards for industrial asset documentation"
+        "Conducted in-depth research on the design and development of Digital Product Passports (DPPs), focusing on integrating core submodels such as Digital Nameplate, Technical Data, Operational Data, and Handover Documentation to enable complete asset lifecycle representation",
+        "Investigated the integration of unique QR codes (IEC 61406) as standardized identifiers for seamless asset tracebility and instant access to lifecycle data",
+        "Explored methods to create comprehensive digital profiles by linking static asset specifications with real-time operational and performance metrics for enhanced monitoring and predective maintenance",
+        "Reviewed regulatory requirements and compliance strategies for Industrial asset documentation and digital product passport frameworks",
       ],
-      technologies: ['Digital Twin', 'Asset Administration Shell', 'QR Code Integration', 'IEC 61406', 'ISO 14040/14044'],
-      github: "https://github.com/Nagendra0510/Digital-Twin-Implementation"
+      technologies: ['Digital Twin', 'Asset Administration Shell', 'QR Code Integration', 'IEC 61406', 'ISO 14040/14044']
     },
     {
       title: "Self-optimized Industry 4.0 Plant",

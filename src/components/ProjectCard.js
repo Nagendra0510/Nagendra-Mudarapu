@@ -49,36 +49,7 @@ const ProjectCard = ({ project, onClick, delay = 0 }) => {
 // Example usage of ProjectCard for your projects
 // Add this in the parent component where ProjectCard is used
 
-const projectData = [
-  {
-    title: 'Implementation of Digital Twin in a Bottle Filling Plant',
-    description: 'Developed Digital Product Passports, integrated QR codes for traceability, and ensured compliance with regulatory standards.',
-    technologies: ['Digital Twin', 'QR Codes', 'Lifecycle Assessment', 'ISO-14040'],
-  },
-  {
-    title: 'Self-optimized Industry 4.0 Plant',
-    description: 'Implemented RFID traceability, tested ladder logic, and created PLC-HMI communication tags for automation.',
-    technologies: ['RFID', 'Raspberry Pi', 'PLC', 'HMI'],
-  },
-  {
-    title: 'Micro Drilling Studies on FDM Sample (PLA BRONZE)',
-    description: 'Analyzed performance differences of FDM printed specimens subjected to CNC micro-drilling and improved processing techniques.',
-    technologies: ['CNC', 'FDM', 'SEM Analysis'],
-  },
-  {
-    title: 'Mechatronic Robotic Device for Precision Irrigation',
-    description: 'Developed a robotic device for self-regulating and precision irrigation using ROS.',
-    technologies: ['ROS', 'Mechatronics', 'Precision Irrigation'],
-  },
-];
 
-// Render project cards
-{projectData.map((project, index) => (
-  <ProjectCard
-    key={index}
-    project={project}
-    delay={index * 100}
-  />
-))}
+
 
 export default ProjectCard;
