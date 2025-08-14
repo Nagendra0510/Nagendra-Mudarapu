@@ -18,9 +18,9 @@ export const timelineData = [
     title: "Working Student (Design and Development Engineer)",
     subtitle: "HZDR (Helmholtz-Zentrum Dresden-Rossendorf)",
     points: [
-      "Design and development of high-precision mechatronic systems using Creo Parametric",
-      "Programming and controlling axis positions of stepper motors using Owisoft",
-      "Improved system automation and control strategies, contributing to increased process efficiency"
+      "Design and development of high-precision mechatronic systems using Creo Parametric, focusing on robust and innovative solutions",
+      "Programmed and controlled stepper motor axis positions via Owisoft to acheive precise, efficient, and repeatable motion control",
+      "Colloborated on automation and control strategy enhancements, improving process efficiency and operational reliability",
     ]
   },{
     year: "2022 - Present",
