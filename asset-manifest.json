@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Nagendra-Mudarapu/static/css/main.51a26fbb.css",
-    "main.js": "/Nagendra-Mudarapu/static/js/main.d5c79b2f.js",
+    "main.js": "/Nagendra-Mudarapu/static/js/main.e0f57f27.js",
     "static/js/488.11c2a9a8.chunk.js": "/Nagendra-Mudarapu/static/js/488.11c2a9a8.chunk.js",
     "static/media/profile-pic.jpg": "/Nagendra-Mudarapu/static/media/profile-pic.583d7dd79185aa2e8e24.jpg",
     "index.html": "/Nagendra-Mudarapu/index.html",
     "main.51a26fbb.css.map": "/Nagendra-Mudarapu/static/css/main.51a26fbb.css.map",
-    "main.d5c79b2f.js.map": "/Nagendra-Mudarapu/static/js/main.d5c79b2f.js.map",
+    "main.e0f57f27.js.map": "/Nagendra-Mudarapu/static/js/main.e0f57f27.js.map",
     "488.11c2a9a8.chunk.js.map": "/Nagendra-Mudarapu/static/js/488.11c2a9a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51a26fbb.css",
-    "static/js/main.d5c79b2f.js"
+    "static/js/main.e0f57f27.js"
   ]
 }
