@@ -25,6 +25,18 @@ export const timelineData = [
     ]
   },
   {
+    year: "Jan 2024 – Jan 2025",
+    title: "Working Student – Design and Development Engineer",
+    subtitle: "HZDR (Helmholtz-Zentrum Dresden-Rossendorf), Dresden",
+    description: "Design and development of High-Precision mechatronic system.",
+    points: [
+  "Design and development of High-Precision mechatronic system to enable reproducible thin film formation for high-energy laser applications.",
+  "Engineered and integrated temperature monitoring and control systems using thermistors, Arduino microcontrollers, and thermostatic water-cooling units to maintain critical stability.",
+      "Improved system reliability by evaluating wiper material performance and implemented low-friction solutions for enhanced durability.",
+      "Applied CAD modelling (Creo Parametric) to support iterative design of target frames and mechatronic assembly."
+    ]
+  },
+  {
     year: "2022 - Present",
     title: "Master of Engineering",
     subtitle: "Hochschule Schmalkalden",
