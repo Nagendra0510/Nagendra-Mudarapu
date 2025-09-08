@@ -213,7 +213,7 @@ const Portfolio = () => {
                   Digitalisation and Sustainability Engineer
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                Digitalisation and Sustainability Engineer focused on implementing Digital Twin Solution as Digital Product Passports to support regulatory compliance, transparency, and sustainable practices in the automotive industry aligning with upcoming EU regulations.
+                Master's student in Mechatronics & Robotics with expierence in digitalization, automation, and sustainability. Skilled in Digital Twin technology, Digital Product Passports, and mechatronic system design, aiming to deliver innovative solutions for sustainable mobility alignes with future industry and regulatory demands.
                 </p>
                 
                 <div className="flex justify-center items-center space-x-4 text-gray-600 dark:text-gray-400">
@@ -257,6 +257,30 @@ const Portfolio = () => {
           </div>
       </section>
 
+
+      {/* Timeline Section */}
+      <section id="timeline" className="min-h-screen py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-accent-light/10 dark:from-accent-dark/10 to-purple-500/5" />
+        <div className="max-w-3xl mx-auto px-4 relative">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Journey So Far
+          </h2>
+          <div className="space-y-8">
+            {timelineData.map((item, index) => (
+              <TimelineItem
+                key={index}
+                year={item.year}
+                title={item.title}
+                subtitle={item.subtitle}
+                description={item.description}
+                points={item.points}
+                delay={index * 100}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section id="projects" className="min-h-screen py-20 relative bg-transparent">
         <div className="absolute inset-0 bg-gradient-to-b from-accent-light/10 dark:from-accent-dark/10 to-blue-500/5" />
@@ -282,29 +306,6 @@ const Portfolio = () => {
               onClose={() => setSelectedProject(null)}
             />
           )}
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section id="timeline" className="min-h-screen py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent-light/10 dark:from-accent-dark/10 to-purple-500/5" />
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Journey So Far
-          </h2>
-          <div className="space-y-8">
-            {timelineData.map((item, index) => (
-              <TimelineItem
-                key={index}
-                year={item.year}
-                title={item.title}
-                subtitle={item.subtitle}
-                description={item.description}
-                points={item.points}
-                delay={index * 100}
-              />
-            ))}
-          </div>
         </div>
       </section>
 

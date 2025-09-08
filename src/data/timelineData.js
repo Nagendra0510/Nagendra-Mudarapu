@@ -37,7 +37,7 @@ export const timelineData = [
     ]
   },
   {
-    year: "2022 - Present",
+    year: "Oct 2022 - Mar 2026",
     title: "Master of Engineering",
     subtitle: "Hochschule Schmalkalden",
     description: "Major in Mechatronics & Robotics with focus on Innovation"
