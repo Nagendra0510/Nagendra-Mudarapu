@@ -5,10 +5,10 @@ export const timelineData = [
     subtitle: "Schaeffler AG, Regensburg",
     description: "Master Title: ‘Digital Product Passport as an Enabler for Circular Economy – ELVR Compliant data for E-Axle Systems’",
     points: [
-      "Developing a Digital Twin Solution as Digital Product Passport (DPP) for Schaeffler’s e-axle system to enable Compliance with upcoming ELVR Requirements.",
-      "Building AAS-based digital twin models for affected components (electric motor, inverter, gearbox) with focus on End-of-life Vehicles.",
-      "Implementing unique identifiers (IEC 61406 QR codes) for Seamless product lifecycle traceability for permanent magnets.",
-      "Creating Custom Submodels for Safe removal and replacement information, and Sustainability reporting.",
+      "Developing a Digital Product(DPP) framework for e-axle systems to enable regulatory compliance and data transparency.",
+      "Implementing AAS-based Digital Twin models in Twinsphere Suite, linking key assets(e-motor, inverter,gearbox) through standardized submodels.",
+      "Integrating technical, material, and lifecycle data into IDTA-defined AAS templates for sustainability and circular-economy use cases.",
+      "Delivering a functional prototype showcasing how digital treceability and compliance data can support end-of-life vehicle.",
       "Exploring Catena-X interoperability for standardized, cross-company data sharing in the automotive supply chain."
     ]
   },
