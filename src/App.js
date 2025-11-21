@@ -213,7 +213,7 @@ const Portfolio = () => {
                   Digitalisation and Sustainability Engineer
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                Master's student in Mechatronics & Robotics with expierence in digitalization, automation, and sustainability. Skilled in Digital Twin technology, Digital Product Passports, and mechatronic system design, aiming to deliver innovative solutions for sustainable mobility aligns with future industry and regulatory demands.
+                Master's student in Mechatronics & Robotics with experience in digitalization, automation, and sustainability. Skilled in Digital Twin technology, Digital Product Passports, and mechatronic system design, aiming to deliver innovative solutions for sustainable mobility aligns with future industry and regulatory demands.
                 </p>
                 
                 <div className="flex justify-center items-center space-x-4 text-gray-600 dark:text-gray-400">
