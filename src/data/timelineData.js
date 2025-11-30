@@ -3,7 +3,7 @@ export const timelineData = [
     year: "09.2025 - 02.2026",
     title: "Master-Thesis ",
     subtitle: "Schaeffler AG, Regensburg",
-    description: "Master Title: ‘Digital Product Passport as an Enabler for Circular Economy – ELVR Compliant data for E-Axle Systems’",
+    description: "Master Title: ‘Implementation of a Digital Twin Model for Regulatory-Compliant E-Axle system’",
     points: [
       "Developing a Digital Product(DPP) framework for e-axle systems to enable regulatory compliance and data transparency.",
       "Implementing AAS-based Digital Twin models in Twinsphere Suite, linking key assets(e-motor, inverter,gearbox) through standardized submodels.",
