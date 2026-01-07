@@ -5,11 +5,10 @@ export const timelineData = [
     subtitle: "Schaeffler AG, Regensburg",
     description: "Master Title: ‘Implementation of a Digital Twin Model for Regulatory-Compliant E-Axle system’",
     points: [
-      "Developing a Digital Product(DPP) framework for e-axle systems to enable regulatory compliance and data transparency.",
-      "Implementing AAS-based Digital Twin models in Twinsphere Suite, linking key assets(e-motor, inverter,gearbox) through standardized submodels.",
-      "Integrating technical, material, and lifecycle data into IDTA-defined AAS templates for sustainability and circular-economy use cases.",
-      "Delivering a functional prototype showcasing how digital treceability and compliance data can support end-of-life vehicle.",
-      "Exploring Catena-X interoperability for standardized, cross-company data sharing in the automotive supply chain."
+      "Designing a Digital Twin architecture for e-axle systems (Motor, Inverter, Gearbox) to automate compliance with the EU End-of-Life Vehicle Regulation (ELVR), ensuring data alignment with Circular Economy mandates.",
+      "Developing Asset Administration Shell (AAS) models via AAS Explorer, establishing standardized digital identities for high-value powertrain assets.",
+      "Integrating complex Engineering Bill of Materials (EBOM), multi-tier material compositions, and lifecycle attributes into IDTA-defined submodel templates (e.g., Digital Nameplate, Technical Data, and Handover Documentation).",
+      "Delivering a functional prototype that facilitates digital traceability, providing recyclers with authenticated access to critical Design for dismantling and Safe Removal datasets.",
     ]
   },
   {
