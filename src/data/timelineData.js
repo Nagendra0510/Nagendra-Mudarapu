@@ -1,14 +1,14 @@
 export const timelineData = [
   {
-    year: "09.2025 - 02.2026",
+    year: "09.2025 - 03.2026",
     title: "Master-Thesis ",
     subtitle: "Schaeffler AG, Regensburg",
-    description: "Master Title: ‘Implementation of a Digital Twin Model for Regulatory-Compliant E-Axle system’",
+    description: "Master Title: ‘Implementation of a Digital Twin Model for a Regulatory-Compliant E-Axle system’",
     points: [
-      "Designing a Digital Twin architecture for e-axle systems (Motor, Inverter, Gearbox) to automate compliance with the EU End-of-Life Vehicle Regulation (ELVR), ensuring data alignment with Circular Economy mandates.",
-      "Developing Asset Administration Shell (AAS) models via AAS Explorer, establishing standardized digital identities for high-value powertrain assets.",
-      "Integrating complex Engineering Bill of Materials (EBOM), multi-tier material compositions, and lifecycle attributes into IDTA-defined submodel templates (e.g., Digital Nameplate, Technical Data, and Handover Documentation).",
-      "Delivering a functional prototype that facilitates digital traceability, providing recyclers with authenticated access to critical Design for dismantling and Safe Removal datasets.",
+      "Built a regulatory-compliant Digital Twin model for a 3-in-1 e-Axle system, enabling ELVR-ready Digital Product Passports across motor, inverter, and gearbox components.",
+      "Implemented Asset Administration Shell product data models aligned with IDTA standards, structuring lifecycle, material composition, and compliance-relevant information for OEM handover.",
+      "Integrated BOM, material composition, and lifecycle attributes into interoperable AAS submodels, ensuring semantic consistency and machine-readability across engineering and sustainability domains.",
+      "Developed and validated a Digital Twin prototype using Twinsphere Suite and AAS Explorer, demonstrating cross-tool interoperability and scalable data exchange.",
     ]
   },
   {
@@ -16,11 +16,11 @@ export const timelineData = [
     title: "Internship: Digitalisation and Sustainability Engineer",
     subtitle: "Schaeffler AG, Regensburg",
     points: [
-      "Designing and implementing Digital Product Passports (DPPs) using Asset Administration Shell (AAS) framework for sustainability and traceability",
-      "Mapping supplier, manufacturing, CAD, and IMDS data into structured AAS submodels",
-      "Evaluating Catena-X interoperability for secure, standardized data exchange across the automotive value chain",
-      "Creating customized AAS submodels for ELVR-compliant reporting and regulatory traceability",
-      "Supporting development of scalable digitalization strategies for e-mobility components within Schaeffler's sustainability goals"
+      "Analzyed EU End-of-Life Vehicle (ELVR) and EU Battery Regulation requirements to assess compliance impact on e-drive systems and define digital data obligations.",
+      "Identified affected components (e-motors, power electronics systems, gearboxes) and mapped required compliance data to support regulatory reporting.",
+      "Structured technical specifications, material composition, and safe removal information to support future regulatory handover and lifecycle transparency.",
+      "Defined Digital Product Passport (DPP) data requirements using the Asset Administration Shell (AAS) framework as a standardized data model baseline.",
+      "Established a scalable conceptual and data foundation for a Digital Twin-based Digital Product Passport supporting regulatory compliance, product traceability, and Circular economy transparency."
     ]
   },
   {

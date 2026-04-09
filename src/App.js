@@ -203,7 +203,7 @@ const Portfolio = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
                 <img 
                   src={ProfilePic}
-                  alt="Abhi"
+                  alt="Nagendra Mudarapu"
                   className="relative w-48 h-48 rounded-full object-cover border-4 border-gray-300 dark:border-gray-800 group-hover:border-blue-500 transition duration-300"
                 />
               </div>
@@ -213,7 +213,7 @@ const Portfolio = () => {
                   Digitalisation and Sustainability Engineer
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                Master's student in Mechatronics & Robotics with practical experience in digitalization and sustainability. Skilled in Digital Twin technology, Digital Product Passports, and mechatronic system design, aiming to deliver innovative solutions for sustainable mobility aligns with future industry and regulatory demands.
+                   Mechatronics and Robotics graduate with practical experience in digitalization and sustainable product development. Skilled in Digital Twin technologies, Digital Product Passports, and Asset Administration Shell (AAS), enabling interoperable OEM-ready digital solutions.
                 </p>
                 
                 <div className="flex justify-center items-center space-x-4 text-gray-600 dark:text-gray-400">
